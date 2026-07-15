@@ -12,8 +12,11 @@ app = FastAPI()
 # 🌐 সলিড ওয়াইল্ডকার্ড পারমিশন উইথ ক্রেডেনশিয়ালস হ্যান্ডলিং
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False, # ওয়াইল্ডকার্ডের সাথে রিয়েল ব্রাউজার রিকোয়েস্ট পাস করার জন্য এটি False থাকা দরকার
+    allow_origins=[
+        "http://localhost:3000",
+        "https://med-assist-ai-six.vercel.app/"  # আপনার আসল Vercel লিংকটি এখানে বসবে
+    ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
