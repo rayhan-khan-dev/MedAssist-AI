@@ -14,7 +14,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://med-assist-ai-six.vercel.app/"  # আপনার আসল Vercel লিংকটি এখানে বসবে
+        "https://med-assist-ai-six.vercel.app"  # আপনার আসল Vercel লিংকটি এখানে বসবে
     ],
     allow_credentials=True,
     allow_methods=["*"],
