@@ -55,15 +55,15 @@ Access Credentials: Valid Google Gemini API Key
 
 1. **Backend Microservice Startup**
    
-# Clone the repository and navigate to backend space
+ //Clone the repository and navigate to backend space
 git clone [https://github.com/rayhan-khan-dev/MedAssist-AI.git](https://github.com/rayhan-khan-dev/MedAssist-AI.git)
 cd MedAssist-AI/backend
 
-# Create virtual environment environment and activate
+ //Create virtual environment environment and activate
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-# Install requirements and run server process
+//Install requirements and run server process
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 Note: Ensure to create a .env file inside the root backend folder mapping configurations for DATABASE_URL, JWT_SECRET, and GEMINI_API_KEY.
