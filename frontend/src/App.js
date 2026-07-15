@@ -65,7 +65,7 @@ function App() {
   useEffect(() => {
     if (token && activeTab === "history") {
       axios
-        .get(`https://medassist-ai.onrender.com/history/${username}`)
+        .get(`https://medassist-ai-7xzm.onrender.com/history/${username}`)
         .then((res) => setHistoryData(res.data))
         .catch((err) => console.log(err));
     }
@@ -76,14 +76,14 @@ function App() {
     try {
       if (isRegister) {
         await axios.post(
-          "https://medassist-ai.onrender.com/auth/register",
+          "https://medassist-ai-7xzm.onrender.com/auth/register",
           authForm,
         );
         alert("Registration Successful!");
         setIsRegister(false);
       } else {
         const res = await axios.post(
-          "https://medassist-ai.onrender.com/auth/login",
+          "https://medassist-ai-7xzm.onrender.com/auth/login",
           {
             email: authForm.email,
             password: authForm.password,
@@ -112,7 +112,7 @@ function App() {
     try {
       // ডাইরেক্ট ডেটা অবজেক্ট পাসিং
       const res = await axios.post(
-        "https://medassist-ai.onrender.com/predict/diabetes",
+        "https://medassist-ai-7xzm.onrender.com/predict/diabetes",
         diabetesData,
       );
       const condition = res.data.risk_detected ? "High Risk" : "Low Risk";
@@ -143,7 +143,7 @@ function App() {
     try {
       // ডাইরেক্ট ডেটা অবজেক্ট পাসিং
       const res = await axios.post(
-        "https://medassist-ai.onrender.com/predict/heart",
+        "https://medassist-ai-7xzm.onrender.com/predict/heart",
         heartData,
       );
       const condition = res.data.risk_detected ? "High Risk" : "Low Risk";
@@ -176,7 +176,7 @@ function App() {
     formData.append("file", skinFile);
     try {
       const res = await axios.post(
-        "https://medassist-ai.onrender.com/predict/skin",
+        "https://medassist-ai-7xzm.onrender.com/predict/skin",
         formData,
       );
       setResult({
@@ -198,7 +198,7 @@ function App() {
   const triggerReportPipeline = async (type, score, condition) => {
     try {
       const reportRes = await axios.post(
-        "https://medassist-ai.onrender.com/ai/generate-report",
+        "https://medassist-ai-7xzm.onrender.com/ai/generate-report",
         {
           test_type: type,
           risk_score: score,
@@ -207,7 +207,7 @@ function App() {
         },
       );
       setAiReport(reportRes.data.bengali_report);
-      await axios.post("https://medassist-ai.onrender.com/history/save", {
+      await axios.post("https://medassist-ai-7xzm.onrender.com/history/save", {
         username: username,
         test_type: type,
         risk_score: score,
