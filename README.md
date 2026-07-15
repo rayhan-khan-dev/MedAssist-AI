@@ -58,18 +58,16 @@ To facilitate immediate assessment without undergoing complete sign-up/registrat
 git clone [https://github.com/rayhan-khan-dev/MedAssist-AI.git](https://github.com/rayhan-khan-dev/MedAssist-AI.git)
 cd MedAssist-AI/backend
 
-# Create virtual environment and activate
+# Create virtual environment environment and activate
 python -m venv .venv
-
-# On Windows (PowerShell/CMD):
-.venv\Scripts\activate
-# On Linux/macOS:
-# source .venv/bin/activate
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install requirements and run server process
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
+**Note: Ensure to create a .env file inside the root backend folder mapping configurations for DATABASE_URL, JWT_SECRET, and GEMINI_API_KEY.**
+
 2. **Client Frontend Execution**
 ```bash
 #Open an isolated command shell window
