@@ -69,14 +69,14 @@ python -m venv .venv
 # Install requirements and run server process
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-
+```
 2. **Client Frontend Execution**
-
-//Open an isolated command shell window
+```bash
+#Open an isolated command shell window
 
 cd MedAssist-AI/frontend
 
-//Install dependencies and start server node
+#Install dependencies and start server node
 
 npm install
 
