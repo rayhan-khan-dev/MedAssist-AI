@@ -6,16 +6,16 @@ MedAssist AI is a decentralized full-stack web application designed to bridge th
 ---
 
 ## 🚀 Live Production Gateways
-* 🌐 **Live Application URL (Frontend):** [https://med-assist-ai-six.vercel.app/](https://med-assist-ai-six.vercel.app/)
-* ⚙️ **Production API Gateway (Backend):** [https://medassist-ai-7xzm.onrender.com/](https://medassist-ai-7xzm.onrender.com/)
-* 📦 **Source Code Repository:** [https://github.com/rayhan-khan-dev/MedAssist-AI](https://github.com/rayhan-khan-dev/MedAssist-AI)
+* 🌐 **Live Application URL (Frontend):** https://med-assist-ai-six.vercel.app/
+* ⚙️ **Production API Gateway (Backend):** https://medassist-ai-7xzm.onrender.com/
+* 📦 **Source Code Repository:** https://github.com/rayhan-khan-dev/MedAssist-AI
 
 ---
 
 ## 🔑 Evaluator Access & Demo Credentials
 To facilitate immediate assessment without undergoing complete sign-up/registration routines, use the pre-initialized production credentials below:
-* **Demo Email Gateway:** `rayhan.etc.01@gmail.com`
-* **Secure Access Key:** `rayhan1234`
+* **Demo Email Gateway:** rayhan.etc.01@gmail.com
+* **Secure Access Key:** rayhan1234
 
 ---
 
@@ -46,34 +46,29 @@ To facilitate immediate assessment without undergoing complete sign-up/registrat
 ---
 
 ## 💻 Local Infrastructure Setup Instructions
-**Pre-requisites**
 
-1.Python Environment Runtime: v3.10 or higher
+### Pre-requisites
+* **Python Environment Runtime:** v3.10 or higher
+* **Frontend Client Runtime:** Node.js LTS Version
+* **Access Credentials:** Valid Google Gemini API Key
 
-2.Frontend Client Runtime: Node.js LTS Version
-
-3.Access Credentials: Valid Google Gemini API Key
-
-
-1. **Backend Microservice Startup**
-   
- //Clone the repository and navigate to backend space
+### 1. Backend Microservice Startup
+```bash
+# Clone the repository and navigate to backend space
 git clone [https://github.com/rayhan-khan-dev/MedAssist-AI.git](https://github.com/rayhan-khan-dev/MedAssist-AI.git)
 cd MedAssist-AI/backend
 
- //Create virtual environment environment and activate
- 
+# Create virtual environment and activate
 python -m venv .venv
 
-source .venv/bin/activate  //On Windows: .venv\Scripts\activate
+# On Windows (PowerShell/CMD):
+.venv\Scripts\activate
+# On Linux/macOS:
+# source .venv/bin/activate
 
-//Install requirements and run server process
-
+# Install requirements and run server process
 pip install -r requirements.txt
-
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-
-Note: Ensure to create a .env file inside the root backend folder mapping configurations for DATABASE_URL, JWT_SECRET, and GEMINI_API_KEY.
 
 2. **Client Frontend Execution**
 
@@ -87,7 +82,7 @@ npm install
 
 npm start
 
-
+```
 ---
 
 ## ⚠️ Disclaimer
