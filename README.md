@@ -45,6 +45,48 @@ To facilitate immediate assessment without undergoing complete sign-up/registrat
 
 ---
 
+## 💻 Local Infrastructure Setup Instructions
+Pre-requisites
+Python Environment Runtime: v3.10 or higher
+
+Frontend Client Runtime: Node.js LTS Version
+
+Access Credentials: Valid Google Gemini API Key
+
+1. **Backend Microservice Startup**
+   
+# Clone the repository and navigate to backend space
+git clone [https://github.com/rayhan-khan-dev/MedAssist-AI.git](https://github.com/rayhan-khan-dev/MedAssist-AI.git)
+cd MedAssist-AI/backend
+
+# Create virtual environment environment and activate
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install requirements and run server process
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+Note: Ensure to create a .env file inside the root backend folder mapping configurations for DATABASE_URL, JWT_SECRET, and GEMINI_API_KEY.
+
+2. **Client Frontend Execution**
+
+# Open an isolated command shell window
+cd MedAssist-AI/frontend
+
+# Install dependencies and start server node
+npm install
+npm start
+
+
+---
+
+## ⚠️ Disclaimer
+**This application is strictly engineered for educational and preliminary diagnostic screening purposes. It does NOT compute definitive clinical diagnoses, generate official pharmaceutical prescriptions, execute emergency triage operations, or act as a substitute for qualified professional medical advice.**
+
+
+---
+
+
 ## 📂 System Folder Directory Layout
 ```text
 MedAssist-AI/
