@@ -66,9 +66,9 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
-**Note: Ensure to create a .env file inside the root backend folder mapping configurations for DATABASE_URL, JWT_SECRET, and GEMINI_API_KEY.**
+*Note: Ensure to create a .env file inside the root backend folder mapping configurations for DATABASE_URL, JWT_SECRET, and GEMINI_API_KEY.*
 
-2. **Client Frontend Execution**
+##2. Client Frontend Execution
 ```bash
 #Open an isolated command shell window
 
@@ -77,7 +77,6 @@ cd MedAssist-AI/frontend
 #Install dependencies and start server node
 
 npm install
-
 npm start
 
 ```
